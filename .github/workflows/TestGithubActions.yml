@@ -1,16 +1,13 @@
-jobs:
-  vm:
-    runs-on: centos-latest
-    steps:
-      - run: |
-          echo This job does not specify a container.
-          echo It runs directly on the virtual machine.
-        name: Run on VM
-  container:
-    runs-on: centos-latest
-    container: node:10.16-jessie
-    steps:
-      - run: |
-          echo This job does specify a container.
-          echo It runs in the container instead of the VM.
-        name: Run in container
+name: PHPGitActionsTest
+   
+on: [push, pull_request]
+   
+jobs: 
+    
+     runs-on: ubuntu-latest
+        
+      steps:
+            name: Print Hello Message
+            run: echo "Hello World"
+
+         
